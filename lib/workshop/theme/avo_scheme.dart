@@ -99,13 +99,29 @@ class AvoScheme {
   /// 3) M3 seed generated scheme, with main brand color locked in.
   static final ColorScheme seedOverrideLight = ColorScheme.fromSeed(
     brightness: Brightness.light,
-    seedColor: const Color(0xFF6750A4),
+    seedColor: AvoTokens.avocado,
     // Color overrides to token values
+    primary: AvoTokens.avocado,
+    primaryContainer: AvoTokens.avocadoMeat,
+    secondary: AvoTokens.avocadoRipe,
+    secondaryContainer: AvoTokens.avocadoTender,
+    tertiary: AvoTokens.avocadoCore,
+    tertiaryContainer: AvoTokens.effectLight,
+    onTertiaryContainer: AvoTokens.effectDark,
   );
   static final ColorScheme seedOverrideDark = ColorScheme.fromSeed(
     brightness: Brightness.dark,
-    seedColor: const Color(0xFF6750A4),
+    seedColor: AvoTokens.avocado,
     // Color overrides to token values
+    primary: AvoTokens.avocadoLush,
+    primaryContainer: AvoTokens.avocadoPrime,
+    onPrimaryContainer: AvoTokens.avocado,
+    secondary: AvoTokens.avocadoTender,
+    secondaryContainer: AvoTokens.avocadoRipe,
+    tertiary: AvoTokens.effectLight,
+    onTertiary: AvoTokens.effectDark,
+    tertiaryContainer: AvoTokens.avocadoCore,
+    onTertiaryContainer: AvoTokens.effectLight,
   );
 
   /// 4) FlexSeedScheme, more options in seed results and you can customize it.
