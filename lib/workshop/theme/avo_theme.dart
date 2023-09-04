@@ -87,7 +87,14 @@ class AvoTheme {
       // Component themes
       //
       // 6) AppBar
-      appBarTheme: AppBarTheme(),
+      appBarTheme: AppBarTheme(
+        backgroundColor: scheme.surface.withOpacity(isLight ? 0.97 : 0.96),
+        foregroundColor: scheme.secondary,
+        elevation: 0,
+        scrolledUnderElevation: isLight ? 0.2 : 2,
+        shadowColor: scheme.shadow,
+        shape: const RoundedRectangleBorder(),
+      ),
       //
       // 7) ElevatedButton
       elevatedButtonTheme: ElevatedButtonThemeData(),
