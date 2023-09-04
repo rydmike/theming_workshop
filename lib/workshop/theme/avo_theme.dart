@@ -163,18 +163,18 @@ class AvoTheme {
       ),
 
       // 12) Switch, make thumb size fixed!
-      switchTheme: SwitchThemeData(
-        thumbIcon: MaterialStateProperty.resolveWith<Icon?>(
-            (Set<MaterialState> states) {
-          return const Icon(
-            Icons.minimize,
-            color: Colors.transparent,
-          );
-        }),
-      ),
+      // switchTheme: SwitchThemeData(
+      //   thumbIcon: MaterialStateProperty.resolveWith<Icon?>(
+      //       (Set<MaterialState> states) {
+      //     return const Icon(
+      //       Icons.minimize,
+      //       color: Colors.transparent,
+      //     );
+      //   }),
+      // ),
 
       // 13) More custom Switch, even more iOS like.
-      // switchTheme: switchTheme(scheme),
+      switchTheme: switchTheme(scheme),
 
       // 14) Input decorator
       // Input decorator is one of the more confusing components to theme.
@@ -212,7 +212,36 @@ class AvoTheme {
   // The intention is that feels familiar on iOS and still also OK on Android.
   static SwitchThemeData switchTheme(ColorScheme scheme) {
     final bool isLight = scheme.brightness == Brightness.light;
-    return SwitchThemeData();
+    return SwitchThemeData(
+      thumbIcon:
+          MaterialStateProperty.resolveWith<Icon?>((Set<MaterialState> states) {
+        return const Icon(Icons.minimize, color: Colors.transparent);
+      }),
+      trackOutlineColor:
+          MaterialStateProperty.resolveWith((Set<MaterialState> states) {
+        return Colors.transparent;
+      }),
+      trackColor:
+          MaterialStateProperty.resolveWith((Set<MaterialState> states) {
+        if (states.contains(MaterialState.disabled)) {
+          if (states.contains(MaterialState.selected)) {
+            return scheme.primary.withOpacity(0.5);
+          }
+          return scheme.onSurface.withOpacity(0.07);
+        }
+        if (states.contains(MaterialState.selected)) {
+          return scheme.primary;
+        }
+        return scheme.surfaceVariant;
+      }),
+      thumbColor:
+          MaterialStateProperty.resolveWith((Set<MaterialState> states) {
+        if (states.contains(MaterialState.disabled)) {
+          return isLight ? scheme.surface : scheme.onSurface.withOpacity(0.7);
+        }
+        return Colors.white;
+      }),
+    );
   }
 
   // 14) A custom input decoration theme.
