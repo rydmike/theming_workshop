@@ -151,15 +151,35 @@ class AvoScheme {
   /// tonal palette
   static final ColorScheme seedsOverrideLight = SeedColorScheme.fromSeeds(
     brightness: Brightness.light,
-    primaryKey: const Color(0xFF6750A4),
-    tones: FlexTones.chroma(Brightness.light),
+    primaryKey: AvoTokens.avocado,
+    secondaryKey: AvoTokens.avocadoRipe,
+    tertiaryKey: AvoTokens.avocadoCore,
+    tones: FlexTones.candyPop(Brightness.light),
     // Color overrides to token values
+    primary: AvoTokens.avocado,
+    primaryContainer: AvoTokens.avocadoMeat,
+    secondary: AvoTokens.avocadoRipe,
+    secondaryContainer: AvoTokens.avocadoTender,
+    tertiary: AvoTokens.avocadoCore,
+    tertiaryContainer: AvoTokens.effectLight,
+    onTertiaryContainer: AvoTokens.effectDark,
   );
   static final ColorScheme seedsOverrideDark = SeedColorScheme.fromSeeds(
     brightness: Brightness.dark,
-    primaryKey: const Color(0xFF6750A4),
-    tones: FlexTones.chroma(Brightness.dark),
+    primaryKey: AvoTokens.avocado,
+    secondaryKey: AvoTokens.avocadoRipe,
+    tertiaryKey: AvoTokens.avocadoCore,
+    tones: FlexTones.candyPop(Brightness.dark),
     // Color overrides to token values
+    primary: AvoTokens.avocadoLush,
+    primaryContainer: AvoTokens.avocadoPrime,
+    onPrimaryContainer: AvoTokens.avocado,
+    secondary: AvoTokens.avocadoTender,
+    secondaryContainer: AvoTokens.avocadoRipe,
+    tertiary: AvoTokens.effectLight,
+    onTertiary: AvoTokens.effectDark,
+    tertiaryContainer: AvoTokens.avocadoCore,
+    onTertiaryContainer: AvoTokens.effectLight,
   );
 
   /// 6) A second theme for the red red wine bar...
