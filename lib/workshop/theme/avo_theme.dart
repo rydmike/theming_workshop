@@ -163,7 +163,15 @@ class AvoTheme {
       ),
 
       // 12) Switch, make thumb size fixed!
-      switchTheme: SwitchThemeData(),
+      switchTheme: SwitchThemeData(
+        thumbIcon: MaterialStateProperty.resolveWith<Icon?>(
+            (Set<MaterialState> states) {
+          return const Icon(
+            Icons.minimize,
+            color: Colors.transparent,
+          );
+        }),
+      ),
 
       // 13) More custom Switch, even more iOS like.
       // switchTheme: switchTheme(scheme),
