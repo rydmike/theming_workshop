@@ -70,7 +70,7 @@ class AvoTheme {
       ),
 
       // 3) Fix the legacy divider color.
-
+      dividerColor: scheme.outlineVariant,
       // 4) Fix legacy primary colors.
 
       // 5) Fix legacy surface colors.
