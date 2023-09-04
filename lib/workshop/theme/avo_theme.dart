@@ -1,4 +1,5 @@
 import 'package:flex_color_scheme/flex_color_scheme.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import 'avo_scheme.dart';
@@ -63,6 +64,10 @@ class AvoTheme {
       visualDensity: visualDensity,
 
       // 2) Consider using M3 Typography even if you use M2 mode.
+      typography: Typography.material2021(
+        platform: defaultTargetPlatform,
+        colorScheme: scheme,
+      ),
 
       // 3) Fix the legacy divider color.
 
