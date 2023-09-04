@@ -149,7 +149,11 @@ class AvoTheme {
       ),
 
       // 10) FloatingActionButton or the FAB.
-      floatingActionButtonTheme: FloatingActionButtonThemeData(),
+      floatingActionButtonTheme: FloatingActionButtonThemeData(
+        backgroundColor: scheme.primaryContainer,
+        foregroundColor: scheme.onPrimaryContainer,
+        shape: const StadiumBorder(),
+      ),
 
       // 11) ChipTheme
       chipTheme: ChipThemeData(),
