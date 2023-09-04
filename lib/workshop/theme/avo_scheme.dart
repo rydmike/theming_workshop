@@ -7,6 +7,8 @@ import 'package:flutter/material.dart';
 class AvoScheme {
   AvoScheme._();
 
+  // Starter
+
   /// 1) M3 seed generated scheme, with main brand color locked in.
   static final ColorScheme seedLight = ColorScheme.fromSeed(
     brightness: Brightness.light,
