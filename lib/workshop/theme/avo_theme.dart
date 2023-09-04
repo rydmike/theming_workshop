@@ -107,9 +107,21 @@ class AvoTheme {
       ),
 
       // 8) Custom radius on other buttons buttons
-      filledButtonTheme: FilledButtonThemeData(),
-      outlinedButtonTheme: OutlinedButtonThemeData(),
-      textButtonTheme: TextButtonThemeData(),
+      filledButtonTheme: FilledButtonThemeData(
+        style: FilledButton.styleFrom(
+          shape: AvoTokens.outlineBorder,
+        ),
+      ),
+      outlinedButtonTheme: OutlinedButtonThemeData(
+        style: OutlinedButton.styleFrom(
+          shape: AvoTokens.outlineBorder,
+        ),
+      ),
+      textButtonTheme: TextButtonThemeData(
+        style: TextButton.styleFrom(
+          shape: AvoTokens.outlineBorder,
+        ),
+      ),
 
       // 9) ToggleButtons Theme
       toggleButtonsTheme: ToggleButtonsThemeData(),
