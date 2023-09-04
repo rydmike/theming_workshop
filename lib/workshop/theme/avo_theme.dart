@@ -52,12 +52,15 @@ class AvoTheme {
 
     // 1) Add fixed visual density
     // For same size and proportions on desktop as we will see on mobile.
+    const VisualDensity visualDensity = VisualDensity.standard;
 
     // Let's make a ThemeData object.
     return ThemeData(
       useMaterial3: settings.useMaterial3,
       colorScheme: scheme,
+
       // 1) Add fixed visual density
+      visualDensity: visualDensity,
 
       // 2) Consider using M3 Typography even if you use M2 mode.
 
