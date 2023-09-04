@@ -156,7 +156,11 @@ class AvoTheme {
       ),
 
       // 11) ChipTheme
-      chipTheme: ChipThemeData(),
+      chipTheme: ChipThemeData(
+        backgroundColor:
+            isLight ? scheme.primaryContainer : scheme.outlineVariant,
+        shape: const StadiumBorder(),
+      ),
 
       // 12) Switch, make thumb size fixed!
       switchTheme: SwitchThemeData(),
