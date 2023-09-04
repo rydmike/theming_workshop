@@ -129,15 +129,21 @@ class AvoScheme {
   /// tonal palette
   static final ColorScheme seedsLight = SeedColorScheme.fromSeeds(
     brightness: Brightness.light,
-    primaryKey: const Color(0xFF6750A4),
-    tones: FlexTones.material(Brightness.light),
+    primaryKey: AvoTokens.avocado,
+    secondaryKey: AvoTokens.avocadoRipe,
+    tertiaryKey: AvoTokens.avocadoCore,
+    tones: FlexTones.chroma(Brightness.light),
     // Color overrides to token values
+    primary: AvoTokens.avocado,
   );
   static final ColorScheme seedsDark = SeedColorScheme.fromSeeds(
     brightness: Brightness.dark,
-    primaryKey: const Color(0xFF6750A4),
-    tones: FlexTones.material(Brightness.dark),
+    primaryKey: AvoTokens.avocado,
+    secondaryKey: AvoTokens.avocadoRipe,
+    tertiaryKey: AvoTokens.avocadoCore,
+    tones: FlexTones.chroma(Brightness.dark),
     // Color overrides to token values
+    primaryContainer: AvoTokens.avocado,
   );
 
   /// 5) FlexSeedScheme, more options in seed results and you can customize it.
