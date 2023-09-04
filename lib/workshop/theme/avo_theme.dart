@@ -3,6 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import 'avo_scheme.dart';
+import 'avo_tokens.dart';
 import 'theme_settings.dart';
 import 'used_theme.dart';
 
@@ -97,7 +98,13 @@ class AvoTheme {
       ),
       //
       // 7) ElevatedButton
-      elevatedButtonTheme: ElevatedButtonThemeData(),
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: scheme.primaryContainer,
+          foregroundColor: scheme.onPrimaryContainer,
+          shape: AvoTokens.outlineBorder,
+        ),
+      ),
 
       // 8) Custom radius on other buttons buttons
       filledButtonTheme: FilledButtonThemeData(),
