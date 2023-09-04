@@ -1,24 +1,27 @@
 import 'package:flex_seed_scheme/flex_seed_scheme.dart';
 import 'package:flutter/material.dart';
 
+import 'avo_tokens.dart';
+
 /// The AvoScheme contains ColorScheme we experiment with for AvoDelish.
 ///
 /// Begin with figuring out your ColorScheme
 class AvoScheme {
   AvoScheme._();
 
-  // Starter
-
   /// 1) M3 seed generated scheme, with main brand color locked in.
   static final ColorScheme seedLight = ColorScheme.fromSeed(
     brightness: Brightness.light,
-    seedColor: const Color(0xFF6750A4),
+    seedColor: AvoTokens.avocado,
+
     // Color overrides to token value
+    primary: AvoTokens.avocado,
   );
   static final ColorScheme seedDark = ColorScheme.fromSeed(
     brightness: Brightness.dark,
-    seedColor: const Color(0xFF6750A4),
+    seedColor: AvoTokens.avocado,
     // Color overrides to token value
+    primaryContainer: AvoTokens.avocado,
   );
 
   /// 2) Generated with M3 WEB theme builder
