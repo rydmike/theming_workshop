@@ -72,6 +72,11 @@ class AvoTheme {
       // 3) Fix the legacy divider color.
       dividerColor: scheme.outlineVariant,
       // 4) Fix legacy primary colors.
+      primaryColor: scheme.primary,
+      primaryColorDark: isLight ? scheme.secondary : scheme.onPrimary,
+      primaryColorLight: isLight ? scheme.secondaryContainer : scheme.secondary,
+      secondaryHeaderColor:
+          isLight ? scheme.primaryContainer : scheme.secondaryContainer,
 
       // 5) Fix legacy surface colors.
 
