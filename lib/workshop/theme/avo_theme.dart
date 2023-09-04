@@ -79,6 +79,10 @@ class AvoTheme {
           isLight ? scheme.primaryContainer : scheme.secondaryContainer,
 
       // 5) Fix legacy surface colors.
+      canvasColor: scheme.background,
+      cardColor: scheme.surface,
+      scaffoldBackgroundColor: scheme.background,
+      dialogBackgroundColor: scheme.surface,
 
       // Component themes
       //
