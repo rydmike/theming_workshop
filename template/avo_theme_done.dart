@@ -255,7 +255,7 @@ class AvoTheme {
     );
   }
 
-  // 17) A custom input decoration theme.
+  // 14) A custom input decoration theme.
   // You may need the input decoration theme in other components too,
   // good to defined separately so you can re-use its definition.
   static InputDecorationTheme inputTheme(ColorScheme scheme) {

@@ -249,7 +249,84 @@ class AvoTheme {
   // good to defined separately so you can re-use its definition.
   static InputDecorationTheme inputTheme(ColorScheme scheme) {
     final bool isLight = scheme.brightness == Brightness.light;
-    return InputDecorationTheme();
+    return InputDecorationTheme(
+      filled: true,
+      fillColor: MaterialStateColor.resolveWith((Set<MaterialState> states) {
+        if (states.contains(MaterialState.disabled)) {
+          return scheme.onSurface.withOpacity(0.04);
+        }
+        return isLight
+            ? scheme.primary.withOpacity(0.06)
+            : scheme.primary.withOpacity(0.15);
+      }),
+      prefixIconColor:
+          MaterialStateColor.resolveWith((Set<MaterialState> states) {
+        if (states.contains(MaterialState.disabled)) {
+          return scheme.onSurface.withOpacity(0.38);
+        }
+        if (states.contains(MaterialState.error)) {
+          return scheme.error;
+        }
+        if (states.contains(MaterialState.focused)) {
+          return scheme.primary;
+        }
+        return scheme.onSurfaceVariant;
+      }),
+      floatingLabelStyle:
+          MaterialStateTextStyle.resolveWith((Set<MaterialState> states) {
+        const TextStyle textStyle = TextStyle();
+        if (states.contains(MaterialState.disabled)) {
+          return textStyle.copyWith(color: scheme.onSurface.withOpacity(0.38));
+        }
+        if (states.contains(MaterialState.error)) {
+          return textStyle.copyWith(color: scheme.error);
+        }
+        if (states.contains(MaterialState.hovered)) {
+          return textStyle.copyWith(color: scheme.onSurfaceVariant);
+        }
+        if (states.contains(MaterialState.focused)) {
+          return textStyle.copyWith(color: scheme.primary);
+        }
+        return textStyle.copyWith(color: scheme.onSurfaceVariant);
+      }),
+      border: MaterialStateOutlineInputBorder.resolveWith(
+          (Set<MaterialState> states) {
+        if (states.contains(MaterialState.disabled)) {
+          return const OutlineInputBorder(
+            borderRadius: AvoTokens.borderRadius,
+            borderSide: BorderSide.none,
+          );
+        }
+        if (states.contains(MaterialState.error)) {
+          if (states.contains(MaterialState.focused)) {
+            return OutlineInputBorder(
+              borderRadius: AvoTokens.borderRadius,
+              borderSide: BorderSide(color: scheme.error, width: 2.0),
+            );
+          }
+          return OutlineInputBorder(
+            borderRadius: AvoTokens.borderRadius,
+            borderSide: BorderSide(color: scheme.error),
+          );
+        }
+        if (states.contains(MaterialState.focused)) {
+          return OutlineInputBorder(
+            borderRadius: AvoTokens.borderRadius,
+            borderSide: BorderSide(color: scheme.primary, width: 2.0),
+          );
+        }
+        if (states.contains(MaterialState.hovered)) {
+          return const OutlineInputBorder(
+            borderRadius: AvoTokens.borderRadius,
+            borderSide: BorderSide.none,
+          );
+        }
+        return const OutlineInputBorder(
+          borderRadius: AvoTokens.borderRadius,
+          borderSide: BorderSide.none,
+        );
+      }),
+    );
   }
 
   // 19) Get our custom GoogleFonts TextTheme: poppins
