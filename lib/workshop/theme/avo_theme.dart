@@ -124,7 +124,29 @@ class AvoTheme {
       ),
 
       // 9) ToggleButtons Theme
-      toggleButtonsTheme: ToggleButtonsThemeData(),
+      toggleButtonsTheme: ToggleButtonsThemeData(
+        borderWidth: AvoTokens.outlineWidth,
+        selectedColor: scheme.onPrimary,
+        color: scheme.primary,
+        fillColor: scheme.primary,
+        borderColor: scheme.outline,
+        selectedBorderColor: scheme.primary,
+        hoverColor: scheme.primary.withAlpha(0x14),
+        focusColor: scheme.primary.withAlpha(0x1F),
+        highlightColor: scheme.primary.withAlpha(0x14),
+        splashColor: scheme.primary.withAlpha(0x1F),
+        disabledColor: scheme.onSurface.withAlpha(0x61),
+        disabledBorderColor: scheme.onSurface.withAlpha(0x1F),
+        borderRadius: AvoTokens.borderRadius,
+        constraints: BoxConstraints(
+          minWidth: AvoTokens.buttonMinSize.width -
+              AvoTokens.outlineWidth * 2 +
+              visualDensity.baseSizeAdjustment.dx,
+          minHeight: AvoTokens.buttonMinSize.height -
+              AvoTokens.outlineWidth * 2 +
+              visualDensity.baseSizeAdjustment.dy,
+        ),
+      ),
 
       // 10) FloatingActionButton or the FAB.
       floatingActionButtonTheme: FloatingActionButtonThemeData(),
