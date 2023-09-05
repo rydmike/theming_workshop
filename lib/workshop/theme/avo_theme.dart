@@ -204,11 +204,11 @@ class AvoTheme {
       ),
 
       // 19) Add a custom TextTheme with GoogleFonts.nnnTextTheme
-      textTheme: googleFontsTextTheme,
+      // textTheme: googleFontsTextTheme,
       primaryTextTheme: googleFontsTextTheme,
 
       // 20) Add a custom TextTheme made from TextStyles
-      // textTheme: textThemeFromStyles,
+      textTheme: textThemeFromStyles,
 
       // 21a) Add the app bar the style in the AppBarTheme in step 6) above.
       // 21b and c) Add content text themes
@@ -350,7 +350,28 @@ class AvoTheme {
   // There is no color issue with GoogleFonts then since TextStyles
   // have null color by default.
   static TextTheme get textThemeFromStyles {
-    return TextTheme();
+    final TextStyle light = GoogleFonts.lato(fontWeight: FontWeight.w300);
+    final TextStyle regular = GoogleFonts.poppins(fontWeight: FontWeight.w400);
+    final TextStyle medium = GoogleFonts.poppins(fontWeight: FontWeight.w500);
+    final TextStyle semiBold = GoogleFonts.poppins(fontWeight: FontWeight.w600);
+
+    return TextTheme(
+      displayLarge: light.copyWith(fontSize: 54), // Default: regular, Size 57
+      displayMedium: light, // Default: regular
+      displaySmall: light, // Default: regular
+      headlineLarge: regular, //Default: regular
+      headlineMedium: regular, // Default: regular
+      headlineSmall: regular, // Default: regular
+      titleLarge: semiBold.copyWith(fontSize: 20), // Default: regular, Size 22
+      titleMedium: medium, // Default: medium
+      titleSmall: medium, // Default: medium
+      bodyLarge: regular, // Regular is default
+      bodyMedium: regular, // Regular is default
+      bodySmall: regular, // Regular is default
+      labelLarge: medium.copyWith(fontSize: 14), // Default: medium, Size 14
+      labelMedium: medium, // Default: medium
+      labelSmall: medium, // Default: medium
+    );
   }
 
   // 21a) Make a totally custom text style for a component theme: AppBar
