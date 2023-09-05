@@ -185,7 +185,9 @@ class AvoTheme {
       buttonTheme: const ButtonThemeData(alignedDropdown: true),
 
       // 16) Dropdown menu theme
-      dropdownMenuTheme: DropdownMenuThemeData(),
+      dropdownMenuTheme: DropdownMenuThemeData(
+        inputDecorationTheme: inputTheme(scheme),
+      ),
 
       // 17) Time picker should have a dial background color.
       timePickerTheme: TimePickerThemeData(),
