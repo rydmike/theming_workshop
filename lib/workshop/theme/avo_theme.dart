@@ -195,7 +195,11 @@ class AvoTheme {
       ),
 
       // 18) Custom date picker style.
-      datePickerTheme: DatePickerThemeData(),
+      datePickerTheme: DatePickerThemeData(
+        headerBackgroundColor: scheme.primaryContainer,
+        headerForegroundColor: scheme.onPrimaryContainer,
+        dividerColor: Colors.transparent,
+      ),
 
       // 19) Add a custom TextTheme with GoogleFonts.nnnTextTheme
       textTheme: googleFontsTextTheme,
