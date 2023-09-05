@@ -18,3 +18,7 @@ The interesting files that we will be working with are:
 
 
 <img src="https://raw.githubusercontent.com/rydmike/theming_workshop/master/doc_images/avo-target.png" alt="avo-target"/>
+
+## Workshop slides
+
+[Slides for intro and talk part](https://docs.google.com/presentation/d/1a4_5Lm9plckURdqdZ-ogPYjk68tgO21C-HHHycA_ymA/edit?usp=sharing)
