@@ -190,7 +190,9 @@ class AvoTheme {
       ),
 
       // 17) Time picker should have a dial background color.
-      timePickerTheme: TimePickerThemeData(),
+      timePickerTheme: TimePickerThemeData(
+        dialBackgroundColor: scheme.surfaceVariant,
+      ),
 
       // 18) Custom date picker style.
       datePickerTheme: DatePickerThemeData(),
