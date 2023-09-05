@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../utils/utils.dart';
 import 'avo_scheme.dart';
+import 'avo_theme_ext.dart';
 import 'avo_tokens.dart';
 import 'theme_settings.dart';
 import 'used_theme.dart';
@@ -215,7 +216,9 @@ class AvoTheme {
       // 21b and c) Add content text themes
 
       // 22) Add all our custom theme extensions.
-      extensions: <ThemeExtension<dynamic>>{},
+      //
+      // Demonstrate font animation and color and harmonization.
+      extensions: <ThemeExtension<dynamic>>{AvoThemeExt.make(scheme)},
     );
   }
 
