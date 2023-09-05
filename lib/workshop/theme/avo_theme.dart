@@ -1,7 +1,9 @@
 import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
+import '../utils/utils.dart';
 import 'avo_scheme.dart';
 import 'avo_tokens.dart';
 import 'theme_settings.dart';
@@ -340,8 +342,8 @@ class AvoTheme {
   // 19) Get our custom GoogleFonts TextTheme: poppins
   // Issue: https://github.com/material-foundation/flutter-packages/issues/401
   static TextTheme get googleFontsTextTheme {
-    // Add ".fixColors"
-    return TextTheme();
+    // Add ".fixColors", remove it to see how text color breaks.
+    return GoogleFonts.poppinsTextTheme().fixColors;
   }
 
   // 20) Make a TextTheme from TextStyles to customize more.
