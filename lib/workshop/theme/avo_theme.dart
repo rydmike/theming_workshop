@@ -750,7 +750,7 @@ class AvoTheme {
         foregroundColor: theme.colorScheme.primary,
       ),
       chipTheme: chipTheme.copyWith(
-        backgroundColor: theme.colorScheme.primaryContainer,
+        backgroundColor: theme.colorScheme.outlineVariant,
       ),
       switchTheme: switchTheme(theme.colorScheme),
       extensions: <ThemeExtension<dynamic>>{
