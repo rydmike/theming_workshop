@@ -182,7 +182,7 @@ class AvoTheme {
 
       // 15) The old button theme still has some usage, like aligning the
       // DropdownButton and DropdownButtonFormField to their parent.
-      buttonTheme: const ButtonThemeData(),
+      buttonTheme: const ButtonThemeData(alignedDropdown: true),
 
       // 16) Dropdown menu theme
       dropdownMenuTheme: DropdownMenuThemeData(),
