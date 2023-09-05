@@ -409,26 +409,177 @@ class AvoTheme {
   static ThemeData flexLight(ThemeSettings settings) {
     final ThemeData theme = FlexThemeData.light(
       useMaterial3: settings.useMaterial3,
+      textTheme: textThemeFromStyles,
+      primaryTextTheme: googleFontsTextTheme,
+      // FlexThemeData properties from the from Playground
+      colors: const FlexSchemeColor(
+        primary: Color(0xff334601),
+        primaryContainer: Color(0xfffff5ad),
+        secondary: Color(0xff3f4925),
+        secondaryContainer: Color(0xffe2eebc),
+        tertiary: Color(0xff4c1c0a),
+        tertiaryContainer: Color(0xfff2b9cc),
+        appBarColor: Color(0xffe2eebc),
+        error: Color(0xffb00020),
+      ),
+      surfaceMode: FlexSurfaceMode.levelSurfacesLowScaffold,
+      appBarStyle: FlexAppBarStyle.surface,
+      appBarOpacity: 0.97,
+      subThemesData: const FlexSubThemesData(
+        blendOnColors: false,
+        useTextTheme: true,
+        useM2StyleDividerInM3: true,
+        adaptiveElevationShadowsBack: FlexAdaptive.all(),
+        textButtonRadius: 10.0,
+        filledButtonRadius: 10.0,
+        elevatedButtonRadius: 10.0,
+        elevatedButtonSchemeColor: SchemeColor.onPrimaryContainer,
+        elevatedButtonSecondarySchemeColor: SchemeColor.primaryContainer,
+        outlinedButtonRadius: 10.0,
+        toggleButtonsRadius: 10.0,
+        switchThumbFixedSize: true,
+        inputDecoratorSchemeColor: SchemeColor.primary,
+        inputDecoratorBackgroundAlpha: 16,
+        inputDecoratorRadius: 10.0,
+        inputDecoratorUnfocusedHasBorder: false,
+        inputDecoratorPrefixIconSchemeColor: SchemeColor.primary,
+        fabUseShape: true,
+        fabAlwaysCircular: true,
+        fabSchemeColor: SchemeColor.primaryContainer,
+        chipSchemeColor: SchemeColor.primary,
+        chipRadius: 40.0,
+        alignedDropdown: true,
+        useInputDecoratorThemeInDialogs: true,
+        datePickerHeaderBackgroundSchemeColor: SchemeColor.primaryContainer,
+        appBarScrolledUnderElevation: 0.5,
+        navigationBarSelectedLabelSchemeColor: SchemeColor.onSurface,
+        navigationBarUnselectedLabelSchemeColor: SchemeColor.onSurface,
+        navigationBarMutedUnselectedLabel: false,
+        navigationBarSelectedIconSchemeColor: SchemeColor.onPrimary,
+        navigationBarUnselectedIconSchemeColor: SchemeColor.onSurface,
+        navigationBarMutedUnselectedIcon: false,
+        navigationBarIndicatorSchemeColor: SchemeColor.primary,
+        navigationBarIndicatorOpacity: 1.00,
+      ),
+      keyColors: const FlexKeyColors(
+        useSecondary: true,
+        useTertiary: true,
+        keepPrimary: true,
+        keepSecondary: true,
+        keepTertiary: true,
+        keepPrimaryContainer: true,
+        keepSecondaryContainer: true,
+        keepTertiaryContainer: true,
+      ),
+      tones: FlexTones.candyPop(Brightness.light),
+      visualDensity: VisualDensity.standard,
     );
-    // Grab the AppBarTheme from the theme we have.
+    // Grab the AppBarTheme and Chip Theme from the theme we have.
     final AppBarTheme appBarTheme = theme.appBarTheme;
+    final ChipThemeData chipTheme = theme.chipTheme;
     // Add the things we could not make in the Playground.
     // AppBar theme with the custom font and unusual foreground color.
     // The switch theme we can totally replace with out custom theme.
     // Plus the custom theme extensions.
-    return theme.copyWith();
+    return theme.copyWith(
+      appBarTheme: appBarTheme.copyWith(
+        titleTextStyle: appBarTextStyle(theme.colorScheme),
+        foregroundColor: theme.colorScheme.primary,
+      ),
+      chipTheme: chipTheme.copyWith(
+        backgroundColor: theme.colorScheme.primaryContainer,
+      ),
+      switchTheme: switchTheme(theme.colorScheme),
+      extensions: <ThemeExtension<dynamic>>{
+        AvoThemeExt.make(theme.colorScheme)
+      },
+    );
   }
 
   // 23) Dark: Entire theme made with ThemesPlayground.
   static ThemeData flexDark(ThemeSettings settings) {
     final ThemeData theme = FlexThemeData.dark(
       useMaterial3: settings.useMaterial3,
+      textTheme: textThemeFromStyles,
+      primaryTextTheme: googleFontsTextTheme,
+      // FlexThemeData properties from the from Playground
+      colors: const FlexSchemeColor(
+        primary: Color(0xffc4d39d),
+        primaryContainer: Color(0xfffffbd8),
+        secondary: Color(0xffe2eebc),
+        secondaryContainer: Color(0xff3f4925),
+        tertiary: Color(0xfff2b9cc),
+        tertiaryContainer: Color(0xff4c1c0a),
+        appBarColor: Color(0xff3f4925),
+        error: Color(0xffcf6679),
+      ),
+      surfaceMode: FlexSurfaceMode.levelSurfacesLowScaffold,
+      appBarStyle: FlexAppBarStyle.surface,
+      appBarOpacity: 0.96,
+      subThemesData: const FlexSubThemesData(
+        useTextTheme: true,
+        useM2StyleDividerInM3: true,
+        textButtonRadius: 10.0,
+        filledButtonRadius: 10.0,
+        elevatedButtonRadius: 10.0,
+        elevatedButtonSchemeColor: SchemeColor.onPrimaryContainer,
+        elevatedButtonSecondarySchemeColor: SchemeColor.primaryContainer,
+        outlinedButtonRadius: 10.0,
+        toggleButtonsRadius: 10.0,
+        switchThumbFixedSize: true,
+        inputDecoratorSchemeColor: SchemeColor.primary,
+        inputDecoratorBackgroundAlpha: 39,
+        inputDecoratorRadius: 10.0,
+        inputDecoratorUnfocusedHasBorder: false,
+        inputDecoratorPrefixIconSchemeColor: SchemeColor.primary,
+        fabUseShape: true,
+        fabAlwaysCircular: true,
+        fabSchemeColor: SchemeColor.primaryContainer,
+        chipSchemeColor: SchemeColor.primary,
+        chipRadius: 40.0,
+        alignedDropdown: true,
+        useInputDecoratorThemeInDialogs: true,
+        datePickerHeaderBackgroundSchemeColor: SchemeColor.primaryContainer,
+        appBarScrolledUnderElevation: 1.0,
+        navigationBarSelectedLabelSchemeColor: SchemeColor.onSurface,
+        navigationBarUnselectedLabelSchemeColor: SchemeColor.onSurface,
+        navigationBarMutedUnselectedLabel: false,
+        navigationBarSelectedIconSchemeColor: SchemeColor.onPrimary,
+        navigationBarUnselectedIconSchemeColor: SchemeColor.onSurface,
+        navigationBarMutedUnselectedIcon: false,
+        navigationBarIndicatorSchemeColor: SchemeColor.primary,
+        navigationBarIndicatorOpacity: 1.00,
+      ),
+      keyColors: const FlexKeyColors(
+        useSecondary: true,
+        useTertiary: true,
+        keepPrimary: true,
+        keepSecondary: true,
+        keepTertiary: true,
+        keepPrimaryContainer: true,
+        keepSecondaryContainer: true,
+        keepTertiaryContainer: true,
+      ),
+      tones: FlexTones.candyPop(Brightness.dark),
+      visualDensity: VisualDensity.standard,
     );
     // Grab the AppBarTheme and Chip Theme from the theme we have.
     final AppBarTheme appBarTheme = theme.appBarTheme;
     final ChipThemeData chipTheme = theme.chipTheme;
     // Add the things we could not make in the Playground.
-    return theme.copyWith();
+    return theme.copyWith(
+      appBarTheme: appBarTheme.copyWith(
+        titleTextStyle: appBarTextStyle(theme.colorScheme),
+        foregroundColor: theme.colorScheme.primary,
+      ),
+      chipTheme: chipTheme.copyWith(
+        backgroundColor: theme.colorScheme.primaryContainer,
+      ),
+      switchTheme: switchTheme(theme.colorScheme),
+      extensions: <ThemeExtension<dynamic>>{
+        AvoThemeExt.make(theme.colorScheme)
+      },
+    );
   }
 
   // 24) Light: Entire theme made with ThemesPlayground - Platform adaptive
