@@ -97,6 +97,7 @@ class AvoTheme {
         scrolledUnderElevation: isLight ? 0.2 : 2,
         shadowColor: scheme.shadow,
         shape: const RoundedRectangleBorder(),
+        titleTextStyle: appBarTextStyle(scheme),
       ),
       //
       // 7) ElevatedButton
@@ -376,17 +377,29 @@ class AvoTheme {
 
   // 21a) Make a totally custom text style for a component theme: AppBar
   static TextStyle appBarTextStyle(ColorScheme scheme) {
-    return TextStyle();
+    return GoogleFonts.lobster(
+      fontWeight: FontWeight.w400,
+      fontSize: 26,
+      color: scheme.primary,
+    );
   }
 
   // 21b) A "semantic" text theme that will use for content, not SDK widgets.
   static TextStyle blogHeader(ColorScheme scheme) {
-    return TextStyle();
+    return GoogleFonts.limelight(
+      fontWeight: FontWeight.w400,
+      fontSize: 24,
+      color: scheme.onSurface,
+    );
   }
 
   // 22c) A "semantic" text style that will use for content, not SDK widgets.
   static TextStyle blogBody(ColorScheme scheme) {
-    return TextStyle();
+    return GoogleFonts.notoSerif(
+      fontWeight: FontWeight.w400,
+      fontSize: 12,
+      color: scheme.onSurface,
+    );
   }
 
   // 23) Light: Entire theme made with ThemesPlayground.
