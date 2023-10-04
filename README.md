@@ -162,7 +162,7 @@ Branch step: https://github.com/rydmike/theming_workshop/tree/19-theme-step-13
     Branch step: https://github.com/rydmike/theming_workshop/tree/25-theme-step-19
 
 
-20) Add a custom TextTheme made from TextStyles. For more flexibility when making a custom `TextTheme` define each `TextStyle` in it. To use different weights they must be explicitly defined to get correct font glyphs, if not defined, they just get an apprpximation that is incorrect. Same applies to italics.
+20) Add a custom TextTheme made from TextStyles. For more flexibility when making a custom `TextTheme` define each `TextStyle` in it. To use different weights they must be explicitly defined to get the correct font glyphs, if not defined, they just get an approximation that is incorrect. Same applies to italics.
     Branch step: https://github.com/rydmike/theming_workshop/tree/26-theme-step-20
 
 
