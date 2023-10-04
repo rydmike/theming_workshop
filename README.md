@@ -2,7 +2,7 @@ Readme
 
 # Theming Workshop Flutter & Friends
 
-This is the repo used at the Theming Workshop held September 5, 2023 in Stockholm at the Flutter'N Friends event.
+This is the repo used at the Theming Workshop held September 5, 2023, in Stockholm at the Flutter'N Friends event.
 
 ## The Theming Mission
 
@@ -32,14 +32,14 @@ The interesting files that we will be working with are:
 
 [Slides for theming teaser talk](https://docs.google.com/presentation/d/1EXXBUeKUXBMNXDHCkCNz-PsH_BsFzH2HEoQYQ3xkPZQ), a slight variation of the intro
 part from the theming workshop. The intent of this talk was only in lightning talk awaken audience
-to the wast possibilities of Material 3 design theming in Flutter.
+to the possibilities of Material 3 design theming in Flutter.
 
 ## Workshop steps
 
-Later I might write an article about the steps involved in the theming workshop to explain
-what was done in the live workshop.
+At some later time, I may write an article about the steps involved in the theming workshop to explain
+what was done during the live workshop.
 
-This repo contains a branch for each step used in the theming workshop that you can check-out and build
+This repo contains a branch for each step used in the theming workshop that you can check out and build
 to see the differences in each step.
 
 ### ColorScheme setup
@@ -58,15 +58,15 @@ The demo app contains eight different example themes. The first six differs only
    Branch step: https://github.com/rydmike/theming_workshop/tree/03-scheme-step-3
 
 
-4) FlexSeedScheme, seed from 3 colors, with the main brand color locked in. (Also used to demonstrate one hue!)  
+4) FlexSeedScheme, seed from three colors, with the main brand color locked in. (Also used to demonstrate one hue!).  
    Branch step: https://github.com/rydmike/theming_workshop/tree/04-scheme-step-4
 
 
-5) FlexSeedScheme, seed from 3 colors, with all token colors locked in.  
+5) FlexSeedScheme, seed from three colors, with all token colors locked in.  
    Branch step: https://github.com/rydmike/theming_workshop/tree/05-scheme-step-5
 
 
-6) A second theme for the Deli's red wine bar. This is completely different color scheme based theme. Used to illustrate ho to swap theme to completely different ColorScheme. In this demo the fictive use case is that deli want a different style for the menu and app in their wine bar and it uses the **Red Red Wine** the was extract from Themes Playground as a ColorScheme only.  
+6) A second theme for the Deli's red wine bar. This is a completely different ColorScheme based theme. Used to illustrate how to swap theme to completely different ColorScheme. In this demo, the fictive use case for it is that deli wants a different style for the app when used in their wine bar. It uses the **Red-Red Wine** theme that was copied from the **Themes Playground** as a ColorScheme.  
 Branch step: https://github.com/rydmike/theming_workshop/tree/06-scheme-step-6
 
 
@@ -103,7 +103,7 @@ The demo app uses a simple function to select the used theme, based on theme set
 
 ### ThemeData Component themes setup
 
-In the next branch steps we define custom styles for a number of example component themes.
+In the next branch steps, we define custom styles for a number of example component themes.
 
 6) AppBar  
    Branch step: https://github.com/rydmike/theming_workshop/tree/12-theme-step-6
@@ -133,7 +133,7 @@ In the next branch steps we define custom styles for a number of example compone
 
 
 13) A more advanced custom Switch theme, very iOS like.  
-This component theme example shows have to make a Switch in Material3, that is very close in style to the iOS switch, if an iOS switch would be colored on widget level to use the custom primary color. The iOS switch cannot be themed, nor does the iOS version of the `Switch.adaptive` use primary color. Thus when using iOS Switch in a Material app, it must always use a wrapper setting widget color prop to `colorScheme.primary` to get the custom primary color, which is often desired. If not wrapped, it it is apple system green when it is an iOS Switch. By using the M3 iOS themed look alike style, we get a switch that is familiar on both Material and iOS and uses the theme color without any wrapper.  
+This component theme example shows have to make a Switch in Material3, that is very close in style to the iOS switch, if an iOS Switch is colored on widget level to use the primary color. The iOS switch cannot be themed, nor does the iOS version of the `Switch.adaptive` use primary color. Thus, when using iOS Switch in a Material app, it must always use a wrapper setting widget color prop to `colorScheme.primary` to get the custom primary color, which is often desired. If not wrapped, it is Apple system green when it is an iOS Switch. By using the M3 iOS themed look alike style, we get a switch that is familiar on both Material and iOS and uses the theme color without any wrapper.  
 Branch step: https://github.com/rydmike/theming_workshop/tree/19-theme-step-13
 
 
@@ -145,7 +145,7 @@ Branch step: https://github.com/rydmike/theming_workshop/tree/19-theme-step-13
     Branch step: https://github.com/rydmike/theming_workshop/tree/21-theme-step-15
 
 
-16) Dropdown menu theme. Use same `InputDecoratorTheme` as main one made for `TextField`, so the text field part of the `DropdownMenu` matches used txt input style. This is often desired.
+16) Dropdown menu theme. Use same `InputDecoratorTheme` as the main one made for `TextField`, so the text field part of the `DropdownMenu` matches used text input style. This is often desired.
     Branch step: https://github.com/rydmike/theming_workshop/tree/22-theme-step-16
 
 
@@ -158,11 +158,11 @@ Branch step: https://github.com/rydmike/theming_workshop/tree/19-theme-step-13
 
 
 19) Add a custom TextTheme with `GoogleFonts.nnnTextTheme`.
-    Explain and demo issues with contrast of fonts with `GoogleFonts.nnnTextTheme` and show fix with extension. `.fixColors`.
+    Explain and demo issues with contrast of fonts with `GoogleFonts.nnnTextTheme` and show fix with the extension `.fixColors`.
     Branch step: https://github.com/rydmike/theming_workshop/tree/25-theme-step-19
 
 
-20) Add a custom TextTheme made from TextStyles. For more flexibility when making a custom `TextTheme` define each `TextStyle` in it. To use different weights they must be explicitly defined to get the correct font glyphs, if not defined, they just get an approximation that is incorrect. Same applies to italics.
+20) Add a custom TextTheme made from TextStyles. For more flexibility when making a custom `TextTheme` define each `TextStyle` in it. To use different weights, they must be explicitly defined to get the correct font glyphs. If not defined, they just get an approximation that is incorrect. The same applies to italics.
     Branch step: https://github.com/rydmike/theming_workshop/tree/26-theme-step-20
 
 
@@ -179,8 +179,8 @@ Branch step: https://github.com/rydmike/theming_workshop/tree/19-theme-step-13
 
 ### Themes Playground Theming
 
-This part of the workshop demonstrates making the theme using the **Themes playground** instead.
-The goal is to recreate the all the above theming things as close as possible using the **Themes Playground**.
+This part of the workshop demonstrates making the theme using the **Themes Playground** instead.
+The goal is to recreate all the above theming as close as possible using the **Themes Playground**.
 At the same time, it also shows that some parts cannot be made in the Playground, but we can add them with
 the API and in some cases by using ThemeData.copyWith. The effort to make the above elaborate theme is still
 significantly lower.
@@ -211,14 +211,14 @@ significantly lower.
     - [ ] LIGHT Primary, opacity 6%, 0x10, Unfocused has border OFF, prefix icon primary
     - [ ] DARK set opacity to 15% 0x27s
 - [ ] Popupmenu and dropdown - Set match button width option.
-- [ ] Menus - Dropdown menu - already uses correct input decorator by default, just show it.
+- [ ] Menus - Dropdown menu, it uses the correct input decorator by default, just show it.
 - [ ] Navigation bar
-    - [ ] Has own legacy default - set to M3 to get same as we used in manual theme above.
+    - [ ] Has FCS legacy default - set to M3 to get the same as we used in the manual theme above.
     - [ ] Make custom with primary and onPrimary - nicer (imo)
 - [ ] Dialogs
     - [ ] Time picker is OK
     - [ ] Date picker - header primary container
-- [ ] FONTS? No fonts in Theme Playground, but we can can add them in API later.
+- [ ] FONTS? No fonts in Theme Playground, but we can add them in API later.
 - [ ] Visual density! - Standard
 - [ ] Swap legacy -> Remove
 - [ ] COPY-PASTE the code
@@ -227,10 +227,10 @@ significantly lower.
     - [ ] Dark
     - [ ] Paste in the custom styles we do not have in the Playground.
 
-24) Entire theme made with ThemesPlayground - Platform adaptive  
+24) Entire theme made with ThemesPlayground - Platform adaptive.  
     Branch step: https://github.com/rydmike/theming_workshop/tree/30-themes-playground-step-24
 
-This part of the workshop changes the setup made in step 23 in the **Themes Playground** to a theme that is platform adaptive and looks a bit different on iOS, macOS and other desktops compared to Android.
+This part of the workshop changes the setup made in step 23 in the **Themes Playground** to a theme that is platform adaptive and that it looks a bit different on iOS, macOS and other desktops compared to Android.
 
 - [ ] Platform adaptive themes
 - [ ] What are platform adaptive themes?
