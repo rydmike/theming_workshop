@@ -36,11 +36,11 @@ to the wast possibilities of Material 3 design theming in Flutter.
 
 ## Workshop steps
 
-Later I might write a full article about the steps involved in the theming workshop to explain
-what was thought in the live workshop.
+Later I might write an article about the steps involved in the theming workshop to explain
+what was done in the live workshop.
 
-This repo contains a branch for each step used in the theming workshop that you can check build
-and see the difference from each step.
+This repo contains a branch for each step used in the theming workshop that you can check-out and build
+to see the differences in each step.
 
 ### ColorScheme setup
 
@@ -179,9 +179,9 @@ Branch step: https://github.com/rydmike/theming_workshop/tree/19-theme-step-13
 
 ### Themes Playground Theming
 
-This part f the workshop demonstrates making the theme using the **Themes playground** instead.
+This part of the workshop demonstrates making the theme using the **Themes playground** instead.
 The goal is to recreate the all the above theming things as close as possible using the **Themes Playground**.
-At the same time it demonstrates that some parts cannot be made in the Playground, but we can add them with
+At the same time, it also shows that some parts cannot be made in the Playground, but we can add them with
 the API and in some cases by using ThemeData.copyWith. The effort to make the above elaborate theme is still
 significantly lower.
 
