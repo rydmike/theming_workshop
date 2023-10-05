@@ -2,7 +2,7 @@ Readme
 
 # Theming Workshop Flutter & Friends
 
-This is the repo used at the Theming Workshop held September 5, 2023, in Stockholm at the Flutter'N Friends event.
+This is the repo used at the Theming Workshop held September 5th, 2023, in Stockholm at the Flutter'N Friends event.
 
 ## The Theming Mission
 
@@ -23,28 +23,30 @@ The interesting files that we will be working with are:
 * /theme/avo_theme.dart
 * /theme/avo_theme_ext.dart
 
-
 <img src="https://raw.githubusercontent.com/rydmike/theming_workshop/master/doc_images/avo-target.png" alt="avo-target"/>
 
-## Workshop slides
+## Slides
 
-[Slides for intro and talk part](https://docs.google.com/presentation/d/1a4_5Lm9plckURdqdZ-ogPYjk68tgO21C-HHHycA_ymA/edit?usp=sharing)
+[Slides for intro and talk part](https://docs.google.com/presentation/d/1a4_5Lm9plckURdqdZ-ogPYjk68tgO21C-HHHycA_ymA/edit?usp=sharing) used during the [Flutter'N Friends theming workshop](https://www.flutterfriends.dev/) held in Stockholm, September 5th, 2023.
 
 [Slides for theming teaser talk](https://docs.google.com/presentation/d/1EXXBUeKUXBMNXDHCkCNz-PsH_BsFzH2HEoQYQ3xkPZQ), a slight variation of the intro
-part from the theming workshop. The intent of this talk was only in lightning talk awaken audience
-to the possibilities of Material 3 design theming in Flutter.
+part from the theming workshop. This slide deck version was used at a local Flutter **Meetup** in Helsinki, October 5th, 2023, hosted by [Montel Intergalactic](https://www.montel.fi/).    
+The intent of this talk was to in a lightning talk introduce the audience
+to the possibilities of theming with Material-3 design in Flutter. Those interested in diving deeper can use this repo to explore further.
 
-## Workshop steps
+## Workshop Steps
 
 At some later time, I may write an article about the steps involved in the theming workshop to explain
 what was done during the live workshop.
 
-This repo contains a branch for each step used in the theming workshop that you can check out and build
-to see the differences in each step.
+This repo contains a branch for each step used in the theming workshop. You can check out each branch and build it
+to see the differences in each step. The steps are briefly explained below, and they have a link to the branch containing the incremental changes for it.
 
-### ColorScheme setup
+### ColorScheme Setup
 
-The demo app contains eight different example themes. The first six differs only in how the used `ColorScheme` is defined.
+The demo app contains eight different example themes. The first six differs only in how the used `ColorScheme` is defined. The `ThemeData` object is later defined manually, with many component themes and theme extensions.
+
+Scheme and Theme versions 7 and 8 are made with the [**Themes Playground**](https://rydmike.com/flexcolorscheme/themesplayground-latest/) web app, and the theme code has been copied from the Playground. They and use the package [**FlexColorScheme**](https://pub.dev/packages/flex_color_scheme) to define their `ThemeData` objects including their `ColorScheme`s.
 
 1) M3 seed generated scheme, with the main brand color locked in.  
    Branch step: https://github.com/rydmike/theming_workshop/tree/01-scheme-step-1
