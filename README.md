@@ -91,7 +91,7 @@ The demo app uses a simple function to select the used theme, based on theme set
 
 
 3) Fix the legacy divider color.  
-   Next, fix all legacy `ThemeData` colors. This is not so critical when using Material3 mode. However, it is still a good to define them all properly (=in a ColorScheme matching way), then if somebody uses the direct `ThemeData` colors in the app, it will look and be OK. Avoid using the `ThemeData` colors as they will all be deprecated eventually.  
+   Next, fix all legacy `ThemeData` colors. This is not so critical when using Material3 mode. However, it is still good to define them all properly (=in a ColorScheme matching way), then if somebody uses the direct `ThemeData` colors in the app, it will look and be OK. Avoid using the `ThemeData` colors as they will all be deprecated eventually.  
    Branch step:  https://github.com/rydmike/theming_workshop/tree/09-theme-step-3
 
 
