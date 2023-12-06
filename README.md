@@ -46,7 +46,7 @@ to see the differences in each step. The steps are briefly explained below, and 
 
 The demo app contains eight different example themes. The first six differs only in how the used `ColorScheme` is defined. The `ThemeData` object is later defined manually, with many component themes and theme extensions.
 
-Scheme and Theme versions 7 and 8 are made with the [**Themes Playground**](https://rydmike.com/flexcolorscheme/themesplayground-latest/) web app, and the theme code has been copied from the Playground. They and use the package [**FlexColorScheme**](https://pub.dev/packages/flex_color_scheme) to define their `ThemeData` objects including their `ColorScheme`s.
+Scheme and Theme versions 7 and 8 are made with the [**Themes Playground**](https://rydmike.com/flexcolorscheme/themesplayground-latest/) web app, and the theme code has been copied from the Playground. They use the package [**FlexColorScheme**](https://pub.dev/packages/flex_color_scheme) to define their `ThemeData` objects including their `ColorScheme`s.
 
 1) M3 seed generated scheme, with the main brand color locked in.  
    Branch step: https://github.com/rydmike/theming_workshop/tree/01-scheme-step-1
